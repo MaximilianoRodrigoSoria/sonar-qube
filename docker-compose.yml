@@ -1,0 +1,46 @@
+version: '3'
+services:
+  sonarqube:
+    image: sonarqube:latest
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    networks:
+      - sonar_network
+    environment:
+      - SONAR_JDBC_URL=jdbc:postgresql://postgres15:5432/sonar
+      - SONAR_JDBC_USERNAME=sonar
+      - SONAR_JDBC_PASSWORD=sonar
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+      - sonarqube_temp:/opt/sonarqube/temp
+    depends_on:
+      - postgres15
+
+  postgres15:
+    image: postgres:15.2
+    container_name: postgres15
+    restart: always
+    volumes:
+      - ./db/sql:/docker-entrypoint-initdb.d  # Se asume que los archivos SQL están en el directorio sql
+    environment:
+      - POSTGRES_DB=sonar
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+    ports:
+      - "5432:5432"
+    networks:
+      - sonar_network
+
+networks:
+  sonar_network:
+    driver: bridge
+
+volumes:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
+  sonarqube_temp:
