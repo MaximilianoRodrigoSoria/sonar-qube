@@ -31,7 +31,7 @@ SonarQube es una herramienta ampliamente utilizada en el desarrollo de software 
 Estos ejemplo esta dados por el curso de Udemy **Gestión Continua de la Calidad del Software con SonarQube**
 
 
-Link: https://www.udemy.com/course/knime-cero-a-intermedio/
+Link: https://www.udemy.com/course/gestion-continua-de-la-calidad-del-software-con-sonarqube/
 
 
 
