@@ -5,9 +5,9 @@
 
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/knime-brightgreen" alt="Knime"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Sonar-Qube-brightgreen" alt="Knime"></a>
   <a href="#"><img src="https://img.shields.io/badge/Chat-on%20Discord-7289da.svg?sanitize=true" alt="Chat"></a>
-  <a href="#"><img src="https://img.shields.io/badge/ETL-Herramientas" alt="ETL"></a>
+  <a href="#"><img src="https://img.shields.io/badge/calidad-calidad" alt="ETL"></a>
 
 <p align="center">
 <a href="https://www.linkedin.com/in/soriamaximilianorodrigo/" target="_blank" rel="noopener noreferrer"></a>
