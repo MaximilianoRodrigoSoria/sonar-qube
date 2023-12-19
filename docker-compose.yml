@@ -22,7 +22,7 @@ services:
 
   postgres15:
     image: postgres:15.2
-    container_name: postgres15
+    container_name: postgres
     restart: always
     volumes:
       - ./db/sql:/docker-entrypoint-initdb.d  # Se asume que los archivos SQL están en el directorio sql
